@@ -6,18 +6,16 @@ import db from "../config/database.js";
 const { DataTypes } = Sequelize;
 
 // Define schema
-const Product = db.define(
-  "products",
+const Siswa = db.define(
+  "siswa",
   {
-    // Define attributes
-    title: {
+    nama: {
       type: DataTypes.STRING,
     },
-    price: {
-      type: DataTypes.DOUBLE,
+    kelas: {
+      type: DataTypes.STRING,
     },
   },
-
   {
     // Freeze Table Name
     freezeTableName: true,
@@ -25,4 +23,4 @@ const Product = db.define(
 );
 
 // Export model Product
-export default Product;
+export default Siswa;

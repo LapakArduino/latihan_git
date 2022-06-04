@@ -2,6 +2,16 @@
 import Product from "../models/Product.js";
 
 // Get semua product
+
+export const latihan = async (req, res) => {
+  try {
+    const product = await Product.findAll();
+    res.send("anda di prank");
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getProducts = async (req, res) => {
   try {
     const product = await Product.findAll();
